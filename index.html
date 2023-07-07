@@ -5,115 +5,487 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagbatt</title>
     <link rel="shortcut icon" href="./img/Minilogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Trochut:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
 
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Londrina Solid', cursive, 'Trochut', cursive;
+        }
+
+        h1 {font-size: 3.5em;}
+
+        h2 {font-size: 2.7em;}
+
+        h3 {
+            font-size: 2em;
+            font-family:'Trochut', cursive;}
+
+        h4 {
+            font-size: 1.25em;
+        }
+
+        p {font-size: 1.25em;}
+
+        ul {
+            font-size: 1.25em;
+            list-style: none;
+        }
+
+        li {font-size: 0.7em;}
+
+        button {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 15px;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            color: snow;
+            background-color: #7649cd;
+        }
+
+        button:hover{
+           background-color: #5d25ce;;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        header {
+            background-color: snow;
+        }
+
+        header .logoCabecera {
+            margin: 0px;
+            padding: 20px 20px;
+            width: 30%;
+        }
+
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+        header a {
+            padding: 5px 12px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+
+        header a:hover {
+            color:#7649cd;
+        }
+
+       #hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        height: 110vh;
+        color: aliceblue;
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.4)),url("img/hero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+       }
+
+       #personajes .container {
+            text-align: center;
+            padding: 120px 12px;
+       }
+
+       #personajes p {
+            display: none;
+       }
+
+       #personajes .card {
+
+       } 
+
+       .card :first-child{
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.4));
+       }
+
+       .card:nth-child(2){
+        
+       }
+
+       .card:nth-child(3){
+
+       }
     </style>
 </head>
 <body>
     <header>
-        <div class="contenedor">
-            <img class="logo" src="./img/logoName.png" alt="Logo">
+        <div class="container">
             <nav>
-                <a href="#">Información del juego</a>
-                <a href="#">Personajes</a>
-                <a href="#">Mapa</a>
-                <a href="#">Equipamiento</a>
-                <a href="#">Noticias</a>
+                <img class="logoCabecera" src="./img/logo.png" alt="Logo">
+                <a href="#">INFORMACION DEL JUEGO</a>
+                <a href="#">PERSONAJES</a>
+                <a href="#">MAPA</a>
+                <a href="#">EQUIPAMIENTO</a>
+                <a href="#">NOTICIAS</a>
 
                 <button class="boton">Jugar Ahora</button>
             </nav>
         </div>
+
     </header>
-    <section class="personajes">
-        <h1>Elige tu personaje</h1>
-        <div class="card">
-            <img class="personaje" src="./img/Annie.jpg" alt="Annie">
-            <div class="textos">
-                <h3>Annie</h3>
-                <p>Annie es una peligrosa, talentosa y encantadora niña maga que posee un inmenso poder piroquinético. Annie es una peligrosa, talentosa y encantadora niña maga que posee un inmenso poder piroquinético.</p>
-				<p>Rol <br>Mago</p>
-                <p>Nivel <br>Medio</p>
-                <ul>Habilidades</ul>
-                    <li>Invocar</li>
-                    <li>Fuego</li>
-                    <li>Escudo</li>
-                
+
+    <section id="hero">
+        <button class="boton">Jugar Ahora</button>
+    </section>
+
+    <section id="personajes">
+        <div class="container">
+
+            <h1>Elige tu personaje</h1>
+            
+            <div class="card">
+                <img class="personaje" src="./img/Annie.jpg" alt="Annie">
+                <div class="textos">
+                    <h3>Annie</h3>
+                    <p>Annie es una peligrosa, talentosa y encantadora niña maga que posee un inmenso poder piroquinético. Su afinidad innata con el fuego se manifestó pronto en su vida a través de explosiones emocionales impredecibles, aunque con el tiempo aprendió a controlar esos ''trucos''. Uno de sus favoritos es invocar a Tibbers, su amado osito de peluche, como una feroz bestia de fuego. Perdida en la perpetua inocencia de la niñez, Annie vaga por los bosques oscuros siempre en busca de alguien con quien jugar.</p>
+                    <h4>Rol <br>Mago</h4>
+                    <h4>Nivel <br>Medio</h4>
+                    <ul>Habilidades
+                        <li>Invocar</li>
+                        <li>Dominio del Fuego</li>
+                        <li>Escudo</li>
+                    </ul>
+                    <button class="boton">+ info</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img class="personaje" src="./img/connor.jpg" alt="Connor">
+                <div class="textos">
+                    <h3>Connor</h3>
+                    <p>Conocido mayormente como Connor Kenway, fue un Maestro Asesino Kanien'kehá:ka durante el período de la Guerra de la Revolución Americana, capitán de la Aquila, heredero de la Hacienda Davenport y líder de la Hermandad de los Asesinos Coloniales.</p>
+                    <h4>Rol <br>Asesino</h4>
+                    <h4>Nivel <br>Alto</h4>
+                    <ul>Habilidades
+                        <li>Sigilo</li>
+                        <li>Hurto</li>
+                        <li>Combate cuerpo a cuerpo</li> 
+                    </ul>
+                    <button class="boton">+ info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="personaje" src="./img/MisaAmane.jpg" alt="Misa Amane">
+                <div class="textos">
+                    <h3>Misa</h3>
+                    <p>Misa Amane es una chica de estatura promedio, cabello rubio y ojos claros, atriz y modelo reconocida. Suele tener una actitud algo infantil, ingenua e impulsiva, pero tambien un fuerte temperamento y determinación. Sus impulsos siempre la llevan a utilizar su poder, los ojos de shirigami y no duda nunca en aporvechar sus encantos fisicos para tomar ventajas sobre sus enemigos.</p>
+                    <h4>Rol <br>Soporte</h4>
+                    <h4>Nivel <br>Bajo</h4>
+                    <ul>Habilidades
+                        <li>Ojos de shirigami</li>
+                        <li>Devoción</li>
+                        <li>Carisma</li> 
+                    </ul>
+                    <button class="boton">+ info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="personaje" src="./img/pyke.jpg" alt="Pyke">
+                <div class="textos">
+                    <h3>Pyke</h3>
+                    <p>Un reconocido arponero de los Muelles del Matadero de Aguasturbias, Pyke debió encontrarse con su fin en el estómago de un enorme leviatán... pero logró regresar. Ahora acecha los húmedos callejones y rincones de su anterior ciudad y usa sus nuevos dones sobrenaturales para dar fin a las vidas de quienes explotan a otros por dinero de manera rápida y violenta. Y así, una ciudad que era reconocida por cazar monstruos ahora está al acecho de uno.</p>
+                    <h4>Rol <br>Soporte</h4>
+                    <h4>Nivel <br>Media</h4>
+                    <ul>Habilidades
+                        <li>Dominio del agua</li>
+                        <li>Camuflaje</li>
+                        <li>Regenara el daño</li>
+                    </ul> 
+                    <button class="boton">+ info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="personaje" src="./img/katnissever.jpg" alt="Katniss">
+                <div class="textos">
+                    <h3>Katniss</h3>
+                    <p>Katniss Everdeen del distrito 12, es muy buena con el arco y la flecha y se le dan muy bien tanto cazar como poner trampas, habilidades que aprendió en sus días de caza con su padre. Ganadora de los Juegos del Hambre, sabe bastante de plantas silvestres, diferenciando las comestibles de las venenosas e incluso conoce plantas medicinales. También es buena escalando árboles, su personalidad es rebelde y su carácter hosco.</p>
+                    <h4>Rol <br>Tirador</h4>
+                    <h4>Nivel <br>Media</h4>
+                    <ul>Habilidades
+                        <li>Arco</li>
+                        <li>Etnobotánico</li>
+                        <li>Liderazgo</li>
+                    </ul>
+                    <button class="boton">+ info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="personaje" src="./img/jinx.jpg" alt="Jinx">
+                <div class="textos">
+                    <h3>Jinx</h3>
+                    <p>Jinx, una maniática e impulsiva criminal de Zaun, vive para sembrar el caos sin pararse a pensar en las consecuencias. Con un arsenal de juguetes letales a su disposición, desata las explosiones más brillantes y los estallidos más ruidosos para dejar un rastro de caos y pánico a su paso. Jinx detesta el aburrimiento y con una gran alegría deja su marca de pandemonio a dondequiera que vaya.</p>
+                    <h4>Rol <br>Tirador</h4>
+                    <h4>Nivel <br>Media</h4>
+                    <ul>Habilidades
+                        <li>Explosiones</li>
+                        <li>Velocidad</li>
+                        <li>Gran Alcance</li> 
+                    </ul>
+                    <button class="boton">+ info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="personaje" src="./img/scorpion.jpg" alt="Scorpion">
+                <div class="textos">
+                    <h3>Scorpion</h3>
+                    <p>Su verdadero nombre es Hanzo Hasashi, un miembro destacado del clan ninja Shiray Ryu, todo su trasfondo se reduce a una interminable búsqueda de venganza por la muerte de su familia y clan por un ataque de Sub-Zero, la cual parece lejos de satisfacer luego de hacer un trato con el guardian del inframundo para poder cumplir esta venganza.
+                    <h4>Rol <br>Luchador</h4>
+                    <h4>Nivel <br>Media</h4>
+                    <ul>Habilidades
+                        <li>Dominio del fuego</li>
+                        <li>Ninja</li>
+                        <li>Teletransportación</li> 
+                    </ul>
+                    <button class="boton">+ info</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="personaje" src="./img/Kratos.jpg" alt="Kratos">
+                <div class="textos">
+                    <h3>Kratos</h3>
+                    <p> Hijo del dios Zeus y Calisto, una mujer mortal, Kratos nació en Esparta, un pueblo guerrero.n Se convirtió en un guerrero brutal, ganando batallas a través de tácticas poco ortodoxas, pero eficaces lo que lo llevo a ganarse el titulo de "El fantasma de Esparta", el Dios de la guerra el hombre que juró cobrar venganza. Kratos es incapaz de aceptar cualquier tipo de responsabilidad por sus acciones, culpando a menudo a los Dioses de los actos que él comete y renegando de ellos. 
+                    <h4>Rol <br>Luchador</h4>
+                    <h4>Nivel <br>Alta</h4>
+                    <ul>Habilidades
+                        <li>Fuerza sobrehumana</li>
+                        <li>Reflejos</li>
+                        <li>Curación acelerada</li> 
+                    </ul>
+                    <button class="boton">+ info</button>
+                </div>
             </div>
         </div>
     </section>
-    <section class="Mapa">
-        <h1>Elige el escenario</h1>
 
-        <div class="card">
-            <img class="Mapa" src="./img/avila.jpg" alt="Caracas">
-            <div class="textos">
-                <h3>Caracas</h3>
-				<p>Venezuela</p>
+    <section id="Mapa">
+        <div class="container">
+            <h1>Elige el escenario</h1>
+
+            <div class="card">
+                <img class="Mapa" src="./img/avila.jpg" alt="Caracas">
+                <div class="textos">
+                    <h3>Caracas</h3>
+                    <p>Venezuela</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card">
-            <img class="Mapa" src="./img/Buenos Aires.jpg" alt="Buenos Aires">
-            <div class="textos">
-                <h3>Buenos Aires</h3>
-                <p>Argentina</p>
+            <div class="card">
+                <img class="Mapa" src="./img/Buenos Aires.jpg" alt="Buenos Aires">
+                <div class="textos">
+                    <h3>Buenos Aires</h3>
+                    <p>Argentina</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card"></div>
-            <img class="Mapa" src="./img/Genova.jpg" alt="Génova">
-            <div class="textos">
-                <h3>Génova</h3>
-                <p>Italia</p>
+            <div class="card">
+                <img class="Mapa" src="./img/Genova.jpg" alt="Génova">
+                <div class="textos">
+                    <h3>Génova</h3>
+                    <p>Italia</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card"></div>
-            <img class="Mapa" src="./img/Hamburgo.jpg" alt="Hamburgo">
-            <div class="textos">
-                <h3>Hamburgo</h3>
-                <p>Alemania</p>
+            <div class="card">
+                <img class="Mapa" src="./img/Hamburgo.jpg" alt="Hamburgo">
+                <div class="textos">
+                    <h3>Hamburgo</h3>
+                    <p>Alemania</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card"></div>
-            <img class="Mapa" src="./img/New York.jpg" alt="New York">
-            <div class="textos">
-                <h3>New York</h3>
-                <p>EEUU</p>
+            <div class="card">
+                <img class="Mapa" src="./img/New York.jpg" alt="New York">
+                <div class="textos">
+                    <h3>New York</h3>
+                    <p>EEUU</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card"></div>
-            <img class="Mapa" src="./img/sidney.jpg" alt="Sidney">
-            <div class="textos">
-                <h3>Sidney</h3>
-                <p>Australia</p>
+            <div class="card">
+                <img class="Mapa" src="./img/sidney.jpg" alt="Sidney">
+                <div class="textos">
+                    <h3>Sidney</h3>
+                    <p>Australia</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card"></div>
-            <img class="Mapa" src="./img/moscu.jpg" alt="Moscu">
-            <div class="textos">
-                <h3>Moscú</h3>
-                <p>Rusia</p>
+            <div class="card">
+                <img class="Mapa" src="./img/moscu.jpg" alt="Moscu">
+                <div class="textos">
+                    <h3>Moscú</h3>
+                    <p>Rusia</p>
+                </div>
             </div>
-        </div>
 
-        <div class="card"></div>
-            <img class="Mapa" src="./img/tianjin.jpg" alt="tianjin">
-            <div class="textos">
-                <h3>Tianjin</h3>
-                <p>China</p>
+            <div class="card">
+                <img class="Mapa" src="./img/tianjin.jpg" alt="tianjin">
+                <div class="textos">
+                    <h3>Tianjin</h3>
+                    <p>China</p>
+                </div>
             </div>
         </div>
     </section>
-    <section class="equipamiento">
-        <h1>Elige tu equipamiento</h1>
-        <div class="armas"></div>
-        <div class="proteccion"></div>
-        <div class="recuperación"></div>
+
+    <section id="equipamiento">
+
+        <div class="container">
+            <h1>Elige tu equipamiento</h1>
+            <div class="card">
+                <div class="armas">
+                    <h3>Armamento</h3>
+                   
+                    <div class="armas">
+                        <h4>Armas de combate cuerpo a cuerpo</h4>
+                        <div class="textos">
+                            <p>Muerde-huesos</p>
+                            <p>Hacha de Huskarl</p>
+                            <p>Sable Britanico</p>
+                            <p>Martillo de Thor</p>
+                            <p>Hojas ocultas</p>
+                            <p>Lanza</p>
+                            <p>Daga punzante</p>
+                            <p>Cuchillo táctico</p>
+                            <p>Tridenter</p>
+                            <p>Bate de béisbol</p>
+                            <p>Sarten</p>
+                            <p>Death note</p>
+                            <p>Katana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="armas">
+                        <h4>Armas de fuego</h4>
+                        <div class="textos">
+                            <p>Classic</p>
+                            <p>Shorty</p>
+                            <p>Ghost</p>
+                            <p>Sheriff</p>
+                            <p>Stringer</p>
+                            <p>Judge</p>
+                            <p>Combat SMG</p>
+                            <p>Cobra DMR</p>
+                            <p>Automatic sniper rifle</p>
+                            <p>Pistolas dobles</p>
+                            <p>Pistola con sileciador</p>
+                            <p>Subfusil compacto</p>
+                            <p>Subfusil de ráfaga</p>
+                            <p>Escopeta de carga</p>
+                            <p>Bulldog</p>
+                            <p>MK-14</p>
+                            <p>Odin</p>
+                            <p>Cañon de salpicón</p>
+                        </div>
+                    </div>
+
+                    <div class="armas">
+                        <h4>Armas de proyección</h4>
+                        <div class="textos">
+                            <p>Arco Explosivo</p>
+                            <p>Arco Mecánico</p>
+                            <p>Arco de caza</p>
+                            <p>Lanzagranadas</p>
+                            <p>Ballesta de cazademonios</p>
+                            <p>Ballesta de cupido</p>
+                            <p>Arpón</p>
+                        </div>
+                    </div>
+
+                    <div class="armas">
+                        <h4>Armas arrojadizas</h4>
+                        <div class="textos">
+                            <p>Piedra que saca la piedra</p>
+                            <p>Bidón de gasolina</p>
+                            <p>Granada</p>
+                            <p>Granada aturdidora</p>
+                            <p>Gas lagrimógeno</p>
+                            <p>Coctel molotov</p>
+                            <p>granada de humo</p>
+                            <p>Lata oxidada</p>
+                            <p>Bomba fétida</p>
+                            <p>Dinamita</p>
+                        </div>
+
+                    <div class="armas">     
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="proteccion"></div>
+                    <h3>Escudos y protección</h3>
+                    <div class="textos">
+                        <p>Escudo Espartano</p>
+                        <p>Escudo Capitan America</p>
+                        <p>Chaleco antibalas</p>
+                        <p>Armadura de luchador de la Arena</p>
+                        <p>Poción de escudo</p>
+                        <p>Chaleco salvavidas</p>
+                        <p>Doble chaleco antibalas</p>
+                        <p>Poción antimagia</p>
+                        <p>Escudo burbuja</p>
+                        <p>Caja de cartón</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="recuperación"></div>
+                    <h3>Curación y salud</h3>
+                    <div class="textos">
+                        <p>Poción curación rapida</p>
+                        <p>Vendaje</p>
+                        <p>Botiquín</p>
+                        <p>Bebida refrescante</p>
+                        <p>Bidón de plasma</p>
+                        <p>Analgésicos</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
-    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Imagbatt Inc. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
