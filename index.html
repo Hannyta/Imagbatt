@@ -16,6 +16,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Londrina Solid', cursive, 'Trochut', cursive;
         }
@@ -111,6 +115,11 @@
         background-position: center center;
        }
 
+       #personajes {
+        background-color: snow;
+        color: rgb(30,30,30);
+       }
+
        #personajes .container {
             text-align: center;
             padding: 120px 12px;
@@ -121,19 +130,33 @@
        }
 
        #personajes .card {
-
-       } 
-
-       .card :first-child{
-        background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.4));
+        background-position: center center;
+        background-size: cover;
+        padding: 50px;
+        margin: 20px;
+        border-radius: 15px;
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
        }
 
-       .card:nth-child(2){
+       footer {
+        background-color: rgba(230, 230, 230, 230);
+       }
+
+       footer p {
+        margin: 0;
+        padding: 12px;
+        color: rgb(100, 100, 100);
+       }
+
+       footer .container {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+       }
+
+       @media (min-width: 720px){
         
-       }
-
-       .card:nth-child(3){
-
        }
     </style>
 </head>
@@ -143,9 +166,9 @@
             <nav>
                 <img class="logoCabecera" src="./img/logo.png" alt="Logo">
                 <a href="#">INFORMACION DEL JUEGO</a>
-                <a href="#">PERSONAJES</a>
-                <a href="#">MAPA</a>
-                <a href="#">EQUIPAMIENTO</a>
+                <a href="#personajes">PERSONAJES</a>
+                <a href="#mapa">MAPA</a>
+                <a href="#equipamiento">EQUIPAMIENTO</a>
                 <a href="#">NOTICIAS</a>
 
                 <button class="boton">Jugar Ahora</button>
@@ -161,144 +184,145 @@
     <section id="personajes">
         <div class="container">
 
-            <h1>Elige tu personaje</h1>
-            
-            <div class="card">
-                <img class="personaje" src="./img/Annie.jpg" alt="Annie">
-                <div class="textos">
-                    <h3>Annie</h3>
-                    <p>Annie es una peligrosa, talentosa y encantadora niña maga que posee un inmenso poder piroquinético. Su afinidad innata con el fuego se manifestó pronto en su vida a través de explosiones emocionales impredecibles, aunque con el tiempo aprendió a controlar esos ''trucos''. Uno de sus favoritos es invocar a Tibbers, su amado osito de peluche, como una feroz bestia de fuego. Perdida en la perpetua inocencia de la niñez, Annie vaga por los bosques oscuros siempre en busca de alguien con quien jugar.</p>
-                    <h4>Rol <br>Mago</h4>
-                    <h4>Nivel <br>Medio</h4>
-                    <ul>Habilidades
-                        <li>Invocar</li>
-                        <li>Dominio del Fuego</li>
-                        <li>Escudo</li>
-                    </ul>
-                    <button class="boton">+ info</button>
+            <h1>Personajes</h1>
+            <div class="programa">
+                <div class="card">
+                    <img class="personaje" src="./img/Annie.jpg" alt="Annie">
+                    <div class="textos">
+                        <h3>Annie</h3>
+                        <p>Annie es una peligrosa, talentosa y encantadora niña maga que posee un inmenso poder piroquinético. Su afinidad innata con el fuego se manifestó pronto en su vida a través de explosiones emocionales impredecibles, aunque con el tiempo aprendió a controlar esos ''trucos''. Uno de sus favoritos es invocar a Tibbers, su amado osito de peluche, como una feroz bestia de fuego. Perdida en la perpetua inocencia de la niñez, Annie vaga por los bosques oscuros siempre en busca de alguien con quien jugar.</p>
+                        <h4>Rol <br>Mago</h4>
+                        <h4>Nivel <br>Medio</h4>
+                        <ul>Habilidades
+                            <li>Invocar</li>
+                            <li>Dominio del Fuego</li>
+                            <li>Escudo</li>
+                        </ul>
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="card">
-                <img class="personaje" src="./img/connor.jpg" alt="Connor">
-                <div class="textos">
-                    <h3>Connor</h3>
-                    <p>Conocido mayormente como Connor Kenway, fue un Maestro Asesino Kanien'kehá:ka durante el período de la Guerra de la Revolución Americana, capitán de la Aquila, heredero de la Hacienda Davenport y líder de la Hermandad de los Asesinos Coloniales.</p>
-                    <h4>Rol <br>Asesino</h4>
-                    <h4>Nivel <br>Alto</h4>
-                    <ul>Habilidades
-                        <li>Sigilo</li>
-                        <li>Hurto</li>
-                        <li>Combate cuerpo a cuerpo</li> 
-                    </ul>
-                    <button class="boton">+ info</button>
+                
+                <div class="card">
+                    <img class="personaje" src="./img/connor.jpg" alt="Connor">
+                    <div class="textos">
+                        <h3>Connor</h3>
+                        <p>Conocido mayormente como Connor Kenway, fue un Maestro Asesino Kanien'kehá:ka durante el período de la Guerra de la Revolución Americana, capitán de la Aquila, heredero de la Hacienda Davenport y líder de la Hermandad de los Asesinos Coloniales.</p>
+                        <h4>Rol <br>Asesino</h4>
+                        <h4>Nivel <br>Alto</h4>
+                        <ul>Habilidades
+                            <li>Sigilo</li>
+                            <li>Hurto</li>
+                            <li>Combate cuerpo a cuerpo</li> 
+                        </ul>
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img class="personaje" src="./img/MisaAmane.jpg" alt="Misa Amane">
-                <div class="textos">
-                    <h3>Misa</h3>
-                    <p>Misa Amane es una chica de estatura promedio, cabello rubio y ojos claros, atriz y modelo reconocida. Suele tener una actitud algo infantil, ingenua e impulsiva, pero tambien un fuerte temperamento y determinación. Sus impulsos siempre la llevan a utilizar su poder, los ojos de shirigami y no duda nunca en aporvechar sus encantos fisicos para tomar ventajas sobre sus enemigos.</p>
-                    <h4>Rol <br>Soporte</h4>
-                    <h4>Nivel <br>Bajo</h4>
-                    <ul>Habilidades
-                        <li>Ojos de shirigami</li>
-                        <li>Devoción</li>
-                        <li>Carisma</li> 
-                    </ul>
-                    <button class="boton">+ info</button>
+                <div class="card">
+                    <img class="personaje" src="./img/MisaAmane.jpg" alt="Misa Amane">
+                    <div class="textos">
+                        <h3>Misa</h3>
+                        <p>Misa Amane es una chica de estatura promedio, cabello rubio y ojos claros, atriz y modelo reconocida. Suele tener una actitud algo infantil, ingenua e impulsiva, pero tambien un fuerte temperamento y determinación. Sus impulsos siempre la llevan a utilizar su poder, los ojos de shirigami y no duda nunca en aporvechar sus encantos fisicos para tomar ventajas sobre sus enemigos.</p>
+                        <h4>Rol <br>Soporte</h4>
+                        <h4>Nivel <br>Bajo</h4>
+                        <ul>Habilidades
+                            <li>Ojos de shirigami</li>
+                            <li>Devoción</li>
+                            <li>Carisma</li> 
+                        </ul>
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img class="personaje" src="./img/pyke.jpg" alt="Pyke">
-                <div class="textos">
-                    <h3>Pyke</h3>
-                    <p>Un reconocido arponero de los Muelles del Matadero de Aguasturbias, Pyke debió encontrarse con su fin en el estómago de un enorme leviatán... pero logró regresar. Ahora acecha los húmedos callejones y rincones de su anterior ciudad y usa sus nuevos dones sobrenaturales para dar fin a las vidas de quienes explotan a otros por dinero de manera rápida y violenta. Y así, una ciudad que era reconocida por cazar monstruos ahora está al acecho de uno.</p>
-                    <h4>Rol <br>Soporte</h4>
-                    <h4>Nivel <br>Media</h4>
-                    <ul>Habilidades
-                        <li>Dominio del agua</li>
-                        <li>Camuflaje</li>
-                        <li>Regenara el daño</li>
-                    </ul> 
-                    <button class="boton">+ info</button>
+                <div class="card">
+                    <img class="personaje" src="./img/pyke.jpg" alt="Pyke">
+                    <div class="textos">
+                        <h3>Pyke</h3>
+                        <p>Un reconocido arponero de los Muelles del Matadero de Aguasturbias, Pyke debió encontrarse con su fin en el estómago de un enorme leviatán... pero logró regresar. Ahora acecha los húmedos callejones y rincones de su anterior ciudad y usa sus nuevos dones sobrenaturales para dar fin a las vidas de quienes explotan a otros por dinero de manera rápida y violenta. Y así, una ciudad que era reconocida por cazar monstruos ahora está al acecho de uno.</p>
+                        <h4>Rol <br>Soporte</h4>
+                        <h4>Nivel <br>Media</h4>
+                        <ul>Habilidades
+                            <li>Dominio del agua</li>
+                            <li>Camuflaje</li>
+                            <li>Regenara el daño</li>
+                        </ul> 
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img class="personaje" src="./img/katnissever.jpg" alt="Katniss">
-                <div class="textos">
-                    <h3>Katniss</h3>
-                    <p>Katniss Everdeen del distrito 12, es muy buena con el arco y la flecha y se le dan muy bien tanto cazar como poner trampas, habilidades que aprendió en sus días de caza con su padre. Ganadora de los Juegos del Hambre, sabe bastante de plantas silvestres, diferenciando las comestibles de las venenosas e incluso conoce plantas medicinales. También es buena escalando árboles, su personalidad es rebelde y su carácter hosco.</p>
-                    <h4>Rol <br>Tirador</h4>
-                    <h4>Nivel <br>Media</h4>
-                    <ul>Habilidades
-                        <li>Arco</li>
-                        <li>Etnobotánico</li>
-                        <li>Liderazgo</li>
-                    </ul>
-                    <button class="boton">+ info</button>
+                <div class="card">
+                    <img class="personaje" src="./img/katnissever.jpg" alt="Katniss">
+                    <div class="textos">
+                        <h3>Katniss</h3>
+                        <p>Katniss Everdeen del distrito 12, es muy buena con el arco y la flecha y se le dan muy bien tanto cazar como poner trampas, habilidades que aprendió en sus días de caza con su padre. Ganadora de los Juegos del Hambre, sabe bastante de plantas silvestres, diferenciando las comestibles de las venenosas e incluso conoce plantas medicinales. También es buena escalando árboles, su personalidad es rebelde y su carácter hosco.</p>
+                        <h4>Rol <br>Tirador</h4>
+                        <h4>Nivel <br>Media</h4>
+                        <ul>Habilidades
+                            <li>Arco</li>
+                            <li>Etnobotánico</li>
+                            <li>Liderazgo</li>
+                        </ul>
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img class="personaje" src="./img/jinx.jpg" alt="Jinx">
-                <div class="textos">
-                    <h3>Jinx</h3>
-                    <p>Jinx, una maniática e impulsiva criminal de Zaun, vive para sembrar el caos sin pararse a pensar en las consecuencias. Con un arsenal de juguetes letales a su disposición, desata las explosiones más brillantes y los estallidos más ruidosos para dejar un rastro de caos y pánico a su paso. Jinx detesta el aburrimiento y con una gran alegría deja su marca de pandemonio a dondequiera que vaya.</p>
-                    <h4>Rol <br>Tirador</h4>
-                    <h4>Nivel <br>Media</h4>
-                    <ul>Habilidades
-                        <li>Explosiones</li>
-                        <li>Velocidad</li>
-                        <li>Gran Alcance</li> 
-                    </ul>
-                    <button class="boton">+ info</button>
+                <div class="card">
+                    <img class="personaje" src="./img/jinx.jpg" alt="Jinx">
+                    <div class="textos">
+                        <h3>Jinx</h3>
+                        <p>Jinx, una maniática e impulsiva criminal de Zaun, vive para sembrar el caos sin pararse a pensar en las consecuencias. Con un arsenal de juguetes letales a su disposición, desata las explosiones más brillantes y los estallidos más ruidosos para dejar un rastro de caos y pánico a su paso. Jinx detesta el aburrimiento y con una gran alegría deja su marca de pandemonio a dondequiera que vaya.</p>
+                        <h4>Rol <br>Tirador</h4>
+                        <h4>Nivel <br>Media</h4>
+                        <ul>Habilidades
+                            <li>Explosiones</li>
+                            <li>Velocidad</li>
+                            <li>Gran Alcance</li> 
+                        </ul>
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img class="personaje" src="./img/scorpion.jpg" alt="Scorpion">
-                <div class="textos">
-                    <h3>Scorpion</h3>
-                    <p>Su verdadero nombre es Hanzo Hasashi, un miembro destacado del clan ninja Shiray Ryu, todo su trasfondo se reduce a una interminable búsqueda de venganza por la muerte de su familia y clan por un ataque de Sub-Zero, la cual parece lejos de satisfacer luego de hacer un trato con el guardian del inframundo para poder cumplir esta venganza.
-                    <h4>Rol <br>Luchador</h4>
-                    <h4>Nivel <br>Media</h4>
-                    <ul>Habilidades
-                        <li>Dominio del fuego</li>
-                        <li>Ninja</li>
-                        <li>Teletransportación</li> 
-                    </ul>
-                    <button class="boton">+ info</button>
+                <div class="card">
+                    <img class="personaje" src="./img/scorpion.jpg" alt="Scorpion">
+                    <div class="textos">
+                        <h3>Scorpion</h3>
+                        <p>Su verdadero nombre es Hanzo Hasashi, un miembro destacado del clan ninja Shiray Ryu, todo su trasfondo se reduce a una interminable búsqueda de venganza por la muerte de su familia y clan por un ataque de Sub-Zero, la cual parece lejos de satisfacer luego de hacer un trato con el guardian del inframundo para poder cumplir esta venganza.
+                        <h4>Rol <br>Luchador</h4>
+                        <h4>Nivel <br>Media</h4>
+                        <ul>Habilidades
+                            <li>Dominio del fuego</li>
+                            <li>Ninja</li>
+                            <li>Teletransportación</li> 
+                        </ul>
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img class="personaje" src="./img/Kratos.jpg" alt="Kratos">
-                <div class="textos">
-                    <h3>Kratos</h3>
-                    <p> Hijo del dios Zeus y Calisto, una mujer mortal, Kratos nació en Esparta, un pueblo guerrero.n Se convirtió en un guerrero brutal, ganando batallas a través de tácticas poco ortodoxas, pero eficaces lo que lo llevo a ganarse el titulo de "El fantasma de Esparta", el Dios de la guerra el hombre que juró cobrar venganza. Kratos es incapaz de aceptar cualquier tipo de responsabilidad por sus acciones, culpando a menudo a los Dioses de los actos que él comete y renegando de ellos. 
-                    <h4>Rol <br>Luchador</h4>
-                    <h4>Nivel <br>Alta</h4>
-                    <ul>Habilidades
-                        <li>Fuerza sobrehumana</li>
-                        <li>Reflejos</li>
-                        <li>Curación acelerada</li> 
-                    </ul>
-                    <button class="boton">+ info</button>
+                <div class="card">
+                    <img class="personaje" src="./img/Kratos.jpg" alt="Kratos">
+                    <div class="textos">
+                        <h3>Kratos</h3>
+                        <p> Hijo del dios Zeus y Calisto, una mujer mortal, Kratos nació en Esparta, un pueblo guerrero.n Se convirtió en un guerrero brutal, ganando batallas a través de tácticas poco ortodoxas, pero eficaces lo que lo llevo a ganarse el titulo de "El fantasma de Esparta", el Dios de la guerra el hombre que juró cobrar venganza. Kratos es incapaz de aceptar cualquier tipo de responsabilidad por sus acciones, culpando a menudo a los Dioses de los actos que él comete y renegando de ellos. 
+                        <h4>Rol <br>Luchador</h4>
+                        <h4>Nivel <br>Alta</h4>
+                        <ul>Habilidades
+                            <li>Fuerza sobrehumana</li>
+                            <li>Reflejos</li>
+                            <li>Curación acelerada</li> 
+                        </ul>
+                        <button class="boton">+ info</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="Mapa">
+    <section id="mapa">
         <div class="container">
             <h1>Elige el escenario</h1>
 
             <div class="card">
-                <img class="Mapa" src="./img/avila.jpg" alt="Caracas">
+                <img class="mapa" src="./img/avila.jpg" alt="Caracas">
                 <div class="textos">
                     <h3>Caracas</h3>
                     <p>Venezuela</p>
@@ -306,7 +330,7 @@
             </div>
 
             <div class="card">
-                <img class="Mapa" src="./img/Buenos Aires.jpg" alt="Buenos Aires">
+                <img class="mapa" src="./img/Buenos Aires.jpg" alt="Buenos Aires">
                 <div class="textos">
                     <h3>Buenos Aires</h3>
                     <p>Argentina</p>
@@ -314,7 +338,7 @@
             </div>
 
             <div class="card">
-                <img class="Mapa" src="./img/Genova.jpg" alt="Génova">
+                <img class="mapa" src="./img/Genova.jpg" alt="Génova">
                 <div class="textos">
                     <h3>Génova</h3>
                     <p>Italia</p>
@@ -322,7 +346,7 @@
             </div>
 
             <div class="card">
-                <img class="Mapa" src="./img/Hamburgo.jpg" alt="Hamburgo">
+                <img class="mapa" src="./img/Hamburgo.jpg" alt="Hamburgo">
                 <div class="textos">
                     <h3>Hamburgo</h3>
                     <p>Alemania</p>
@@ -330,7 +354,7 @@
             </div>
 
             <div class="card">
-                <img class="Mapa" src="./img/New York.jpg" alt="New York">
+                <img class="mapa" src="./img/New York.jpg" alt="New York">
                 <div class="textos">
                     <h3>New York</h3>
                     <p>EEUU</p>
@@ -338,7 +362,7 @@
             </div>
 
             <div class="card">
-                <img class="Mapa" src="./img/sidney.jpg" alt="Sidney">
+                <img class="mapa" src="./img/sidney.jpg" alt="Sidney">
                 <div class="textos">
                     <h3>Sidney</h3>
                     <p>Australia</p>
@@ -346,7 +370,7 @@
             </div>
 
             <div class="card">
-                <img class="Mapa" src="./img/moscu.jpg" alt="Moscu">
+                <img class="mapa" src="./img/moscu.jpg" alt="Moscu">
                 <div class="textos">
                     <h3>Moscú</h3>
                     <p>Rusia</p>
@@ -354,7 +378,7 @@
             </div>
 
             <div class="card">
-                <img class="Mapa" src="./img/tianjin.jpg" alt="tianjin">
+                <img class="mapa" src="./img/tianjin.jpg" alt="tianjin">
                 <div class="textos">
                     <h3>Tianjin</h3>
                     <p>China</p>
